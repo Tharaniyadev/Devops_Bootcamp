@@ -1,0 +1,428 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+
+
+=======================================================================================
+
+labuser@ip-172-31-19-27:~$ git --version
+git version 2.17.1
+labuser@ip-172-31-19-27:~$ cd Desktop/Git_Commands/
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands$ mkdir BootCamp_Git
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands$ cd BootCamp_Git/
+
+=======================================================================================
+
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git init
+Initialized empty Git repository in /home/labuser/Desktop/Git_Commands/BootCamp_Git/.git/
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ vi Sample.txt
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ vi Sample2.txt
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ vi Sample3.txt
+
+=======================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git add Sample.txt
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Sample.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Sample2.txt
+	Sample3.txt
+
+=======================================================================================
+=======================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git add .
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   Sample.txt
+	new file:   Sample2.txt
+	new file:   Sample3.txt
+
+===============================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git commit -m "First Git commit"
+[master (root-commit) db91761] First Git commit
+ Committer: Lab User <labuser@ip-172-31-19-27.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 3 insertions(+)
+ create mode 100644 Sample.txt
+ create mode 100644 Sample2.txt
+ create mode 100644 Sample3.txt
+
+
+
+==========================================================================================================================
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ 
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ 
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git config --global user.name ="Tharaniyadev"
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git config --global user.email="tharaniyakarthika@gmail.com"
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git config user.name="Tharaniyadev"
+error: invalid key: user.name=Tharaniyadev
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/BootCamp_Git$ git config user.name
+=Tharaniyadev
+==========================================================================================================================
+
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+labuser@ip-172-31-19-27:~$ cd /home/labuser/Desktop/Git_Commands/Bootcamp_Git/
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git$ git clone https://github.com/Tharaniyadev/Devops_Bootcamp/
+Cloning into 'Devops_Bootcamp'...
+remote: Enumerating objects: 43, done.
+remote: Counting objects: 100% (43/43), done.
+remote: Compressing objects: 100% (21/21), done.
+remote: Total 43 (delta 3), reused 42 (delta 2), pack-reused 0
+Unpacking objects: 100% (43/43), done.
+
+==========================================================================================================================
+
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git$ cd Devops_Bootcamp/
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ vi sample.txt
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ vi Sample1.txt
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ vi Sample3.txt
+
+==========================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git remote add origin https://github.com/Tharaniyadev/Devops_Bootcamp/
+fatal: remote origin already exists.
+
+========================================================================================================================================
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git pull origin master
+From https://github.com/Tharaniyadev/Devops_Bootcamp
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git add sample.txt
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   sample.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Sample1.txt
+	Sample3.txt
+
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git add .
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Sample1.txt
+	new file:   Sample3.txt
+	new file:   sample.txt
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ 
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git commit "Sample files Added"
+error: pathspec 'Sample files Added' did not match any file(s) known to git.
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git commit -m "Sample files Added"
+[master 0c0b937] Sample files Added
+ Committer: =Tharaniyadev <labuser@ip-172-31-19-27.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 3 insertions(+)
+ create mode 100644 Sample1.txt
+ create mode 100644 Sample3.txt
+ create mode 100644 sample.txt
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ 
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git push origin master
+Username for 'https://github.com': Tharaniyadev
+Password for 'https://Tharaniyadev@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 422 bytes | 422.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/Tharaniyadev/Devops_Bootcamp/
+   13c7979..0c0b937  master -> master
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ 
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git branch
+* master
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git branch DevopsBranch
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git branch
+  DevopsBranch
+* master
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git branch Branch2
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git branch
+  Branch2
+  DevopsBranch
+* master
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git branch -d Branch2
+Deleted branch Branch2 (was 0c0b937).
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git branch
+  DevopsBranch
+* master
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git merge DevopsBranch
+Already up to date.
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ 
+
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/Tharaniyadev/Devops_Bootcamp/
+  Push  URL: https://github.com/Tharaniyadev/Devops_Bootcamp/
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git checkout DevopsBranch
+Switched to branch 'DevopsBranch'
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ vi Merge.txt
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git status
+On branch DevopsBranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Merge.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+========================================================================================================================================
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git add .
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git commit -m "Added Merge filed"
+[DevopsBranch d3e93bf] Added Merge filed
+ Committer: =Tharaniyadev <labuser@ip-172-31-19-27.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Merge.txt
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git merge DevopsBranch
+Updating 0c0b937..d3e93bf
+Fast-forward
+ Merge.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Merge.txt
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git push
+Username for 'https://github.com': Tharaniyadev
+Password for 'https://Tharaniyadev@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Tharaniyadev/Devops_Bootcamp/
+   0c0b937..d3e93bf  master -> master
+
+========================================================================================================================================
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git checkout DevopsBranch
+Switched to branch 'DevopsBranch'
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git status
+On branch DevopsBranch
+nothing to commit, working tree clean
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git push
+fatal: The current branch DevopsBranch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin DevopsBranch
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git push --set-upstream origin DevopsBranch
+Username for 'https://github.com': Tharaniyadev
+Password for 'https://Tharaniyadev@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'DevopsBranch' on GitHub by visiting:
+remote:      https://github.com/Tharaniyadev/Devops_Bootcamp/pull/new/DevopsBranch
+remote: 
+To https://github.com/Tharaniyadev/Devops_Bootcamp/
+ * [new branch]      DevopsBranch -> DevopsBranch
+Branch 'DevopsBranch' set up to track remote branch 'DevopsBranch' from 'origin'.
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ ^C
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ ^C
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ 
+
+========================================================================================================================================
+
+
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git rebase origin/master
+Current branch master is up to date.
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ vi RevertCheck.txt
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ 
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git add RevertCheck.txt
+
+========================================================================================================================================
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git commit -m "RevertCheck"
+[master 2c52493] RevertCheck
+ Committer: =Tharaniyadev <labuser@ip-172-31-19-27.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 RevertCheck.txt
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git log
+commit 2c5249353bb7520938b5c80c21ca6f1b5f683903 (HEAD -> master)
+Author: =Tharaniyadev <labuser@ip-172-31-19-27.ap-south-1.compute.internal>
+Date:   Tue Sep 22 08:58:37 2020 +0000
+
+    RevertCheck
+
+commit d3e93bfdda9c97e86c46a69279f8347fe8a1e33b (origin/master, origin/HEAD, origin/DevopsBranch, DevopsBranch)
+Author: =Tharaniyadev <labuser@ip-172-31-19-27.ap-south-1.compute.internal>
+Date:   Tue Sep 22 08:21:59 2020 +0000
+
+    Added Merge filed
+
+commit 0c0b9374cd0dc232952cb7c736e736ab96f76aff
+Author: =Tharaniyadev <labuser@ip-172-31-19-27.ap-south-1.compute.internal>
+Date:   Tue Sep 22 08:10:57 2020 +0000
+
+    Sample files Added
+
+commit 13c79793c4a31349b299d675b3f05798581f366d
+Author: Lab User <labuser@ip-172-31-19-27.ap-south-1.compute.internal>
+Date:   Tue Sep 22 07:28:45 2020 +0000
+:
+[2]+  Stopped                 git log
+
+========================================================================================================================================
+
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ git revert 2c5249353bb7520938b5c80c21ca6f1b5f683903
+[master 7716232] Revert "RevertCheck"
+ Committer: =Tharaniyadev <labuser@ip-172-31-19-27.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 RevertCheck.txt
+labuser@ip-172-31-19-27:~/Desktop/Git_Commands/Bootcamp_Git/Devops_Bootcamp$ 
+
+========================================================================================================================================
