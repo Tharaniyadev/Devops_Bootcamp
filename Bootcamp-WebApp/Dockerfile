@@ -4,7 +4,7 @@ EXPOSE 8889
 
 ARG JAR_FILE=/*.war
 
-COPY ${JAR_FILE} app.war
+COPY ${JAR_FILE} /opt/tomcat/webapps/app.war
 
 ENTRYPOINT ["java", "-war", "app.war"]
 
