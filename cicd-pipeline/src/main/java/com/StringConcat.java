@@ -17,8 +17,15 @@ public class StringConcat {
 	@GetMapping("/Welcome/{Name}")
 	public String Welcome(@PathVariable("Name") String Name)
 	{
+		if(Name.matches("^\\d+(\\.\\d+)?"))
+		{
+			return "Please Enter String"; 
 		
-		return WelcomeMsg+" "+Name;
+		}
+		else
+		{
+			return WelcomeMsg+" "+Name;
+		}
 	}
 	
 	@GetMapping("/Welcome/{Name}/{Greetings}")
@@ -35,12 +42,12 @@ public class StringConcat {
 		return WelcomeMsg+" "+Name+" "+Greetings+ " "+Greeting2;
 	}
 	
-	@GetMapping("/Welcome/{num}")
+	/*@GetMapping("/Welcome/{num}")
 	public String Welcome(@PathVariable("num") int num)
 	{
 		
 		return "Please Enter String";
-	}
+	}*/
 	
 
 }

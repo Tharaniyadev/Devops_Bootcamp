@@ -34,7 +34,7 @@ public class StringConcatTest {
 	
 	@Test
 	public void testWelcomeNum() {
-		 Assertions.assertEquals("Please Enter String",stringConcat.Welcome(2));
+		 Assertions.assertEquals("Please Enter String",stringConcat.Welcome("2"));
 	}
 	
 
