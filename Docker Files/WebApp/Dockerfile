@@ -1,11 +1,7 @@
-From tomcat:8.5.11-jre8
+From tomcat:8.0
 
-EXPOSE 8889
+EXPOSE 8886
 
-ARG JAR_FILE=/*.war
-
-COPY ${JAR_FILE} /opt/tomcat/webapps/app.war
-
-ENTRYPOINT ["java", "-war", "app.war"]
+COPY /target/WebApp_Bootcamp.war /usr/local/tomcat/webapps/
 
 MAINTAINER "tharaniyakarthika@gmail.com"

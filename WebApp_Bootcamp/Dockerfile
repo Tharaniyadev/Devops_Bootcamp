@@ -1,11 +1,7 @@
-From tomcat:9.0
+From tomcat:8.0
 
-EXPOSE 8889
+EXPOSE 8886
 
-ARG JAR_FILE=/target/*.war
-
-COPY ${JAR_FILE} /opt/tomcat/webapps/app.war
-
-CMD ["catalina.sh", "run"]
+COPY /target/WebApp_Bootcamp.war /usr/local/tomcat/webapps/
 
 MAINTAINER "tharaniyakarthika@gmail.com"
